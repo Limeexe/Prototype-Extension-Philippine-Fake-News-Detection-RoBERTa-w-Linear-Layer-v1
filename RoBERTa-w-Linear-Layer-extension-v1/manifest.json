@@ -1,0 +1,17 @@
+{
+    "manifest_version": 3,
+    "name": "Fake News Detector using RoBERTa",
+    "version": "1.0",
+    "description": "Analyze news articles for credibility, summarize them, and fetch author information. By: Team LiveANet",
+    "permissions": ["activeTab", "scripting", "storage"],
+    "host_permissions": ["http://localhost:5000/*"],
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "icons": {
+        "16": "img/icon16.png",
+        "48": "img/icon48.png",
+        "128": "img/icon128.png"
+      }
+  }
+  

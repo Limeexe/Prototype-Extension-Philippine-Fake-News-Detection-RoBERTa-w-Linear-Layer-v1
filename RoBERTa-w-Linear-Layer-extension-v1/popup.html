@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Fake News Detector using RoBERTa</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo-section">
+                <img src="img/logofake.jpg" alt="Logo" class="logo">
+                <h1>Credibility News Detector</h1>
+            </div>
+            <p class="subtitle">AI-powered news verification tool.</p>
+        </div>
+
+        <div class="input-section">
+            <div class="url-input-wrapper">
+                <div class="url-icon">🔗</div>
+                <textarea id="url-input" placeholder="Article URL will be automatically captured"></textarea>
+            </div>
+            <button id="analyze-btn" class="analyze-button">
+                <span class="button-text">Analyze Article</span>
+                <div class="loader hidden"></div>
+            </button>
+        </div>
+
+        <div id="results" class="hidden">
+            <div class="result-card">
+                <div class="article-info">
+                    <div class="article-header">
+                        <h2 id="title" class="article-title"></h2>
+                        <div class="article-meta">
+                            <span class="author-label">Author:</span>
+                            <span id="author" class="author-name"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="credibility-section">
+                    <div class="credibility-badge">
+                        <div class="credibility-status">
+                            <div class="status-icon"></div>
+                            <span id="credibility"></span>
+                        </div>
+                        <div class="confidence-container">
+                            <span class="confidence-label">Analysis Score via Cross-Referencing</span>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar">
+                                    <div class="progress-fill"></div>
+                                </div>
+                                <span id="confidence" class="confidence-score"></span>
+                            </div>
+                            <span>To better analyze, see references below</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="summary-section">
+                    <div class="summary-header">
+                        <h3>Article Summary</h3>
+                        <div class="summary-icon">📝</div>
+                    </div>
+                    <div id="summary-container">
+                        <p id="summary" class="highlighted-text"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p class="footer-text">Powered by AI • Analyze with confidence</p>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
